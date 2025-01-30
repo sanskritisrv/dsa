@@ -2,21 +2,35 @@
     "version": "2.0.0",
     "tasks": [
         {
+ HEAD
             "label": "build and run",
             "type": "shell",
             "command": "g++",
+
+            "label": "g++ build active file",
+            "type": "shell",
+            "command": "/usr/bin/g++",  // Use the full path to g++ if needed
+ b9411c3 (initial commit)
             "args": [
                 "-g",
                 "${file}",
                 "-o",
+ HEAD
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
+
+                "${fileDirname}/${fileBasenameNoExtension}.exe"
+ b9411c3 (initial commit)
             ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
             "problemMatcher": ["$gcc"],
+ HEAD
             "detail": "Generated task for C++ build and run."
+
+            "detail": "Generated task by Debugger."
+ b9411c3 (initial commit)
         }
     ]
 }

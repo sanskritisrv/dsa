@@ -1,0 +1,53 @@
+1.used to denote by &operator
+2.pointers are special variable that store the address of another variables 
+3.syntax of creating a pointer = int *ptr= &a
+4.pointer of a int variable is a int itself
+5.pointer would also have an address  ut that address is different from variable ka address
+6.jab hum koi pointer lete hai thats tores the address of some another pointer that is denoted by 
+  int** ptr2=&ptr;
+7.we can also derefernce the variable by using syntax
+  *(&a)
+
+**NULL PONIER**
+1.null pointer means we have not allotted a valid memory location to that value 
+  which is to say that
+  int **ptr=NULL will give 0 when we print it 
+
+**PASS BY REFERENCE**
+1.can we done by 
+a.pointers
+b.alias
+POINTERS-we pass address of variables here instead of passing the variable to avoid creating a copy of the variable.
+void changename(int *ptr)
+{
+    *ptr=30;
+}
+int main(){
+    int a=10;
+    changename(&a);
+}
+ALIAS-means another name for the variable 
+void changename(int &b)
+{
+    b=30;
+}
+int main()
+{
+    int a=10;
+    changename(a);
+}
+
+**ARRAY POINTERS**
+1.array by default is a pointer 
+i.e- arr=[1,2,3,4]
+print arr=some address
+print *arr=1
+2.array pointers are constant pointers whose value vannot be chanaged throughout the program
+
+**POINTER ARITHMETIC**
+1. Increment/Decrement- p++/++p means that the value will not be incremented by 1 but the data type of the value will get added i.e
+int a=10;
+int* ptr=&a;
+ptr++ will give 104 on printing (we are considering the address of a id 100)
+
+
